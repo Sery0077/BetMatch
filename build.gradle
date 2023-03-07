@@ -16,4 +16,5 @@ ext {
     appCompatVer = '1.6.1'
     androidMaterialVer = '1.8.0'
     constraintLayoutVer = '2.1.4'
+    navVersion = "2.5.3"
 }

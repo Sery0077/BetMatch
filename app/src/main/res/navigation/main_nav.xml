@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="sery.vlasenko.betmatch.ui.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_tablesFragment"
+            app:destination="@id/tablesFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_statisticsFragment"
+            app:destination="@id/statisticsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="sery.vlasenko.betmatch.ui.news.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="sery.vlasenko.betmatch.ui.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/tableDetailFragment"
+        android:name="sery.vlasenko.betmatch.ui.tableDetail.TableDetailFragment"
+        android:label="fragment_table_detail"
+        tools:layout="@layout/fragment_table_detail" />
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="sery.vlasenko.betmatch.ui.statistics.StatisticsFragment"
+        android:label="fragment_statistics"
+        tools:layout="@layout/fragment_statistics" />
+    <fragment
+        android:id="@+id/tablesFragment"
+        android:name="sery.vlasenko.betmatch.ui.tables.TablesFragment"
+        android:label="fragment_tables"
+        tools:layout="@layout/fragment_tables" >
+        <action
+            android:id="@+id/action_tablesFragment_to_tableDetailFragment"
+            app:destination="@id/tableDetailFragment" />
+    </fragment>
+</navigation>
