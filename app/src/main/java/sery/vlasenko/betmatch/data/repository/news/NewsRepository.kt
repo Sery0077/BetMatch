@@ -4,24 +4,23 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
-import okio.IOException
 import sery.vlasenko.betmatch.data.BetMatchService
+import sery.vlasenko.betmatch.model.DataResult
 import sery.vlasenko.betmatch.model.NewsItem
-import sery.vlasenko.betmatch.model.Result
 import javax.inject.Inject
 
 class NewsRepository @Inject constructor(
     private val service: BetMatchService
 ) : INewsRepository {
-    override fun getNews(): Flow<Result<List<NewsItem>>> {
+    override fun getNews(): Flow<DataResult<List<NewsItem>>> {
         return flow {
-            emit(Result.loading())
+            emit(DataResult.loading())
 
             val result = try {
                 val news = service.getNews()
-                Result.success(news)
+                DataResult.success(news)
             } catch (e: Exception) {
-                Result.error("Error: ${e.message}", null)
+                DataResult.error("Error: ${e.message}", null)
             }
 
             emit(result)

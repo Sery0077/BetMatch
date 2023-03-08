@@ -29,4 +29,7 @@ ext {
 
     // Hilt
     hiltVer = "2.44"
+
+    // Glide
+    glideVer = "4.15.0"
 }
