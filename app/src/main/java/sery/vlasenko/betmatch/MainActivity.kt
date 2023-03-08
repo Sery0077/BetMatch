@@ -16,6 +16,6 @@ class MainActivity : AppCompatActivity() {
     private fun delayAndSetContentView() {
         Handler(Looper.getMainLooper()).postDelayed({
             setContentView(R.layout.activity_main)
-        }, 3000)
+        }, 0)
     }
 }

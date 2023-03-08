@@ -3,6 +3,7 @@ plugins {
     id 'com.android.application' version '7.4.1' apply false
     id 'com.android.library' version '7.4.1' apply false
     id 'org.jetbrains.kotlin.android' version '1.8.0' apply false
+    id 'com.google.dagger.hilt.android' version '2.44' apply false
 }
 
 ext {
@@ -16,5 +17,16 @@ ext {
     appCompatVer = '1.6.1'
     androidMaterialVer = '1.8.0'
     constraintLayoutVer = '2.1.4'
+
+    // Navigation
     navVersion = "2.5.3"
+
+    // Lifecycle ktx
+    lifecycleKtxVer = "2.4.1"
+
+    // Retrofit
+    retrofitVer = "2.9.0"
+
+    // Hilt
+    hiltVer = "2.44"
 }

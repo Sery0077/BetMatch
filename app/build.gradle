@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
@@ -15,6 +17,8 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField "String", "BASE_URL", '"http://84.38.181.162/api/"'
     }
 
     buildFeatures {
@@ -43,10 +47,24 @@ dependencies {
     implementation "com.google.android.material:material:$androidMaterialVer"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVer"
 
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
     // Navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$navVersion"
     implementation "androidx.navigation:navigation-ui-ktx:$navVersion"
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+
+    // Lifecycle ktx
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleKtxVer"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleKtxVer"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVer"
+    implementation "com.squareup.retrofit2:converter-moshi:$retrofitVer"
+
+    // Hilt
+    implementation "com.google.dagger:hilt-android:$hiltVer"
+    kapt "com.google.dagger:hilt-compiler:$hiltVer"
+
+    // Debug
+    debugImplementation "com.squareup.okhttp3:logging-interceptor:4.10.0"
 }
