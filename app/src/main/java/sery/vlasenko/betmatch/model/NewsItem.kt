@@ -1,4 +1,4 @@
-package sery.vlasenko.betmatch.model.pojo
+package sery.vlasenko.betmatch.model
 
 data class NewsItem(
     val title: String,

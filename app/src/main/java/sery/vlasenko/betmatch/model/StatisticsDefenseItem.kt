@@ -1,4 +1,4 @@
-package sery.vlasenko.betmatch.model.pojo
+package sery.vlasenko.betmatch.model
 
 import com.squareup.moshi.Json
 

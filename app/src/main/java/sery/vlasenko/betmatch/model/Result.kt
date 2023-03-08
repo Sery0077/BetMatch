@@ -1,4 +1,4 @@
-package sery.vlasenko.betmatch.model.pojo
+package sery.vlasenko.betmatch.model
 
 class Result<out T>(val status: Status, val data: T?, val message: String?) {
 

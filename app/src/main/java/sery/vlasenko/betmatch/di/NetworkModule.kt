@@ -9,9 +9,8 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import sery.vlasenko.betmatch.BuildConfig
-import sery.vlasenko.betmatch.model.BetMatchService
+import sery.vlasenko.betmatch.data.BetMatchService
 import java.util.concurrent.TimeUnit
-import javax.inject.Qualifier
 import javax.inject.Singleton
 
 @Module
@@ -41,7 +40,11 @@ class NetworkModule {
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit =
         Retrofit.Builder()
             .baseUrl(provideBaseUrl())
-            .addConverterFactory(MoshiConverterFactory.create())
+            .addConverterFactory(
+                MoshiConverterFactory
+                    .create()
+                    .failOnUnknown()
+            )
             .client(okHttpClient)
             .build()
 

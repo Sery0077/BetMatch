@@ -5,12 +5,11 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
-import sery.vlasenko.betmatch.model.pojo.NewsItem
+import sery.vlasenko.betmatch.data.repository.news.NewsRepository
+import sery.vlasenko.betmatch.model.NewsItem
+import sery.vlasenko.betmatch.model.Result
 import javax.inject.Inject
-import sery.vlasenko.betmatch.model.pojo.Result
-import sery.vlasenko.betmatch.model.repository.news.NewsRepository
 
 @HiltViewModel
 class NewsViewModel @Inject constructor(private val repository: NewsRepository): ViewModel() {

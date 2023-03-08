@@ -1,12 +1,13 @@
-package sery.vlasenko.betmatch.model.repository.news
+package sery.vlasenko.betmatch.data.repository.news
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
-import sery.vlasenko.betmatch.model.BetMatchService
-import sery.vlasenko.betmatch.model.pojo.NewsItem
-import sery.vlasenko.betmatch.model.pojo.Result
+import okio.IOException
+import sery.vlasenko.betmatch.data.BetMatchService
+import sery.vlasenko.betmatch.model.NewsItem
+import sery.vlasenko.betmatch.model.Result
 import javax.inject.Inject
 
 class NewsRepository @Inject constructor(
@@ -16,12 +17,11 @@ class NewsRepository @Inject constructor(
         return flow {
             emit(Result.loading())
 
-            val news = service.getNews()
-
-            val result = if (news.isNullOrEmpty()) {
-                Result.error("Error", null)
-            } else {
+            val result = try {
+                val news = service.getNews()
                 Result.success(news)
+            } catch (e: Exception) {
+                Result.error("Error: ${e.message}", null)
             }
 
             emit(result)
