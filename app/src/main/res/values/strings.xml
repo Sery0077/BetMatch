@@ -13,4 +13,9 @@
     <string name="notifications">Уведомления</string>
     <string name="night_theme">Ночная тема</string>
     <string name="change">change</string>
+
+    // Shared preferences
+    <string name="prefs">prefs</string>
+    <string name="pref_background_id">pref_background_id</string>
+    <string name="wallpapers">Обои</string>
 </resources>
