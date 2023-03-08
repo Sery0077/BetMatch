@@ -14,10 +14,16 @@
         <!-- Customize your theme here. -->
 
         <item name="android:windowBackground">@drawable/background_1</item>
-        <item name="android:buttonStyle">@style/PrimaryButton</item>
+        <item name="android:buttonStyle">@style/MainButtonStyle</item>
+    </style>
+
+    <style name="MainButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_style</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold|italic</item>
     </style>
     
-    <style name="PrimaryButton" parent="Widget.AppCompat.Button">
+    <style name="MainMenuButton" parent="MainButtonStyle">
         <item name="android:background">@drawable/button_style</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textStyle">bold|italic</item>
@@ -31,5 +37,9 @@
         <item name="android:textStyle">bold|italic</item>
         <item name="android:textSize">42sp</item>
         <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="SettingsText" parent="FragmentTitle">
+        <item name="android:textSize">26sp</item>
     </style>
 </resources>

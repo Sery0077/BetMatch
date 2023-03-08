@@ -39,24 +39,28 @@
             android:id="@+id/btn_tables"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/MainMenuButton"
             android:text="@string/tables" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_news"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/MainMenuButton"
             android:text="@string/news" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_statistics"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/MainMenuButton"
             android:text="@string/statistics" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_settings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            style="@style/MainMenuButton"
             android:text="@string/settings" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

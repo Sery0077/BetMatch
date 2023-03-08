@@ -1,11 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.settings.SettingsFragment">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/left_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/right_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="20dp" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/settings_label"
+            style="@style/FragmentTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/settings_underline"
+            app:layout_constraintEnd_toEndOf="@id/right_guideline"
+            app:layout_constraintStart_toStartOf="@id/left_guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginTop="20dp"
+            tools:text="@string/settings_underline" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/notifications_label"
+            style="@style/SettingsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/notifications"
+            app:layout_constraintStart_toStartOf="@id/left_guideline"
+            app:layout_constraintTop_toBottomOf="@id/settings_label" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/sw_notifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:thumb="@drawable/switch_thumb"
+            app:layout_constraintBottom_toBottomOf="@+id/notifications_label"
+            app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+            app:layout_constraintTop_toTopOf="@+id/notifications_label"
+            app:track="@drawable/switch_track" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/night_theme_label"
+            style="@style/SettingsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/night_theme"
+            app:layout_constraintStart_toStartOf="@id/left_guideline"
+            app:layout_constraintTop_toBottomOf="@id/notifications_label" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/sw_night_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:thumb="@drawable/switch_thumb"
+            app:layout_constraintBottom_toBottomOf="@+id/night_theme_label"
+            app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+            app:layout_constraintTop_toTopOf="@+id/night_theme_label"
+            app:track="@drawable/switch_track" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/wallpapers_label"
+            style="@style/SettingsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/night_theme"
+            app:layout_constraintStart_toStartOf="@id/left_guideline"
+            app:layout_constraintTop_toBottomOf="@id/night_theme_label" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_night_theme_change"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/change"
+            app:layout_constraintBottom_toBottomOf="@+id/wallpapers_label"
+            app:layout_constraintEnd_toEndOf="@id/right_guideline"
+            app:layout_constraintTop_toBottomOf="@id/wallpapers_label"
+            app:layout_constraintTop_toTopOf="@id/wallpapers_label" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

@@ -24,14 +24,14 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/left_guedline"
+            android:id="@+id/left_guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_begin="20dp" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/right_guedline"
+            android:id="@+id/right_guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -47,8 +47,8 @@
             android:textColor="@color/black"
             android:textSize="22sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@id/right_guedline"
-            app:layout_constraintStart_toStartOf="@id/left_guedline"
+            app:layout_constraintEnd_toEndOf="@id/right_guideline"
+            app:layout_constraintStart_toStartOf="@id/left_guideline"
             app:layout_constraintTop_toBottomOf="@id/image"
             tools:text="Дзюба и Лунёв не летят на сбор Зенита. Почему?" />
 
@@ -58,7 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:text="@{news.date}"
-            app:layout_constraintStart_toStartOf="@id/left_guedline"
+            app:layout_constraintStart_toStartOf="@id/left_guideline"
             app:layout_constraintTop_toBottomOf="@id/title"
             tools:text="14 января 2021" />
 
@@ -68,8 +68,8 @@
             android:layout_height="1dp"
             android:layout_marginTop="16dp"
             android:background="@color/black"
-            app:layout_constraintEnd_toEndOf="@id/right_guedline"
-            app:layout_constraintStart_toStartOf="@id/left_guedline"
+            app:layout_constraintEnd_toEndOf="@id/right_guideline"
+            app:layout_constraintStart_toStartOf="@id/left_guideline"
             app:layout_constraintTop_toBottomOf="@id/date" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -80,8 +80,8 @@
             android:maxLines="8"
             android:text="@{news.text}"
             android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="@id/right_guedline"
-            app:layout_constraintStart_toStartOf="@id/left_guedline"
+            app:layout_constraintEnd_toEndOf="@id/right_guideline"
+            app:layout_constraintStart_toStartOf="@id/left_guideline"
             app:layout_constraintTop_toBottomOf="@id/view"
             tools:text="@tools:sample/lorem/random" />
 
