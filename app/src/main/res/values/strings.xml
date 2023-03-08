@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Bet Match</string>
+
+    <string name="tables">Таблицы</string>
+    <string name="news">Новости</string>
+    <string name="statistics">Статистика</string>
+    <string name="settings">Настройки</string>
+
+    <string name="tables_underline"><u>Таблицы</u></string>
+    <string name="news_underline"><u>Новости</u></string>
+    <string name="statistics_underline"><u>Статистика</u></string>
+    <string name="settings_underline"><u>Настройки</u></string>
+    <string name="notifications">Уведомления</string>
+    <string name="night_theme">Ночная тема</string>
+    <string name="change">change</string>
+
+    // Shared preferences
+    <string name="prefs">prefs</string>
+    <string name="pref_background_id">pref_background_id</string>
+    <string name="wallpapers">Обои</string>
 </resources>
